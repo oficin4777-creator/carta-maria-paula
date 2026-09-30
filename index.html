@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      content="width=device-width, initial-scale=1.0">
 
 <title>Para María Paula ❤️</title>
 
 <style>
+
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
 
 *{
     margin:0;
@@ -15,53 +22,87 @@
     box-sizing:border-box;
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:
-        radial-gradient(circle at 20% 10%, #ffd6e7 0%, transparent 35%),
-        ...
-}
-
 html{
     scroll-behavior:smooth;
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
     background:
-        radial-gradient(circle at 20% 10%, #ffd6e7 0%, transparent 35%),
-        radial-gradient(circle at 90% 20%, #cce7ff 0%, transparent 35%),
-        linear-gradient(135deg,#ffe5ef,#e9f5ff,#fff0f7);
+
+        radial-gradient(
+            circle at 20% 10%,
+            #ffd6e7 0%,
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 90% 20%,
+            #cce7ff 0%,
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #ffe5ef,
+            #e9f5ff,
+            #fff0f7
+        );
 
     min-height:100vh;
+
     overflow-x:hidden;
+
     color:#333;
 }
 
+
 /* =========================
-   FONDO
+   CORAZONES DEL FONDO
 ========================= */
 
 .background-hearts{
+
     position:fixed;
+
     inset:0;
+
     pointer-events:none;
+
     overflow:hidden;
+
     z-index:0;
 }
 
 .heart{
+
     position:absolute;
+
     bottom:-50px;
+
     font-size:20px;
-    animation:floatHeart linear infinite;
+
+    animation:
+        floatHeart
+        linear
+        infinite;
+
     opacity:.65;
 }
 
 @keyframes floatHeart{
 
     0%{
-        transform:translateY(0) rotate(0deg);
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
         opacity:0;
     }
 
@@ -70,120 +111,225 @@ body{
     }
 
     100%{
-        transform:translateY(-115vh) rotate(360deg);
+
+        transform:
+            translateY(-115vh)
+            rotate(360deg);
+
         opacity:0;
     }
 }
+
 
 /* =========================
    PANTALLA INICIAL
 ========================= */
 
 .intro{
+
     min-height:100vh;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     padding:25px;
+
     position:relative;
+
     z-index:2;
 }
 
 .intro-box{
+
     width:100%;
+
     max-width:430px;
+
     text-align:center;
-    padding:35px 22px 40px;
+
+    padding:
+        35px
+        22px
+        40px;
+
     border-radius:35px;
 
-    background:rgba(255,255,255,.78);
-    backdrop-filter:blur(18px);
-    -webkit-backdrop-filter:blur(18px);
+    background:
+        rgba(255,255,255,.78);
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
 
     box-shadow:
-        0 25px 70px rgba(120,70,100,.20),
-        inset 0 0 0 1px rgba(255,255,255,.8);
 
-    animation:appear 1.2s ease;
+        0 25px 70px
+        rgba(120,70,100,.20),
+
+        inset 0 0 0 1px
+        rgba(255,255,255,.8);
+
+    animation:
+        appear
+        1.2s
+        ease;
 }
 
 @keyframes appear{
+
     from{
+
         opacity:0;
-        transform:translateY(35px) scale(.95);
+
+        transform:
+            translateY(35px)
+            scale(.95);
     }
+
     to{
+
         opacity:1;
-        transform:translateY(0) scale(1);
+
+        transform:
+            translateY(0)
+            scale(1);
     }
 }
 
+
+/* =========================
+   ETIQUETAS
+========================= */
+
 .badges{
+
     display:flex;
+
     justify-content:center;
+
     gap:10px;
+
     margin-bottom:18px;
 }
 
 .badge{
-    padding:8px 13px;
+
+    padding:
+        8px
+        13px;
+
     border-radius:30px;
+
     background:white;
-    box-shadow:0 6px 18px rgba(0,0,0,.08);
+
+    box-shadow:
+        0 6px 18px
+        rgba(0,0,0,.08);
+
     font-size:13px;
+
     font-weight:bold;
 }
 
+
+/* =========================
+   TITULO
+========================= */
+
 .title{
+
     font-size:42px;
+
     color:#e91e63;
+
     margin-bottom:10px;
-    text-shadow:0 4px 15px rgba(233,30,99,.18);
+
+    text-shadow:
+        0 4px 15px
+        rgba(233,30,99,.18);
 }
 
 .subtitle{
+
     color:#666;
+
     line-height:1.6;
+
     font-size:16px;
 }
+
 
 /* =========================
    PERSONAJES
 ========================= */
 
 .characters{
+
     display:flex;
+
     justify-content:space-around;
+
     align-items:center;
+
     margin:25px 0;
 }
 
 .character{
+
     font-size:65px;
-    filter:drop-shadow(0 8px 10px rgba(0,0,0,.12));
-    animation:bounce 2.5s ease-in-out infinite;
+
+    filter:
+        drop-shadow(
+            0 8px 10px
+            rgba(0,0,0,.12)
+        );
+
+    animation:
+        bounce
+        2.5s
+        ease-in-out
+        infinite;
 }
 
 .character:nth-child(3){
+
     animation-delay:.5s;
 }
 
 @keyframes bounce{
+
     0%,100%{
-        transform:translateY(0) rotate(-3deg);
+
+        transform:
+            translateY(0)
+            rotate(-3deg);
     }
 
     50%{
-        transform:translateY(-10px) rotate(3deg);
+
+        transform:
+            translateY(-10px)
+            rotate(3deg);
     }
 }
 
 .big-heart{
+
     font-size:45px;
-    animation:pulse 1.4s infinite;
+
+    animation:
+        pulse
+        1.4s
+        infinite;
 }
 
 @keyframes pulse{
+
     0%,100%{
         transform:scale(1);
     }
@@ -193,188 +339,331 @@ body{
     }
 }
 
+
 /* =========================
    SOBRE
 ========================= */
 
 .envelope-area{
-    margin:30px auto;
+
+    margin:
+        30px
+        auto;
+
     perspective:900px;
 }
 
 .envelope{
+
     width:230px;
+
     height:155px;
+
     margin:auto;
+
     position:relative;
+
     cursor:pointer;
+
     transform-style:preserve-3d;
+
     transition:.7s;
 }
 
 .envelope:hover{
+
     transform:scale(1.04);
 }
 
 .envelope-body{
+
     position:absolute;
+
     inset:0;
-    background:linear-gradient(145deg,#ff6fa3,#e91e63);
+
+    background:
+        linear-gradient(
+            145deg,
+            #ff6fa3,
+            #e91e63
+        );
+
     border-radius:8px;
-    box-shadow:0 18px 40px rgba(233,30,99,.25);
+
+    box-shadow:
+        0 18px 40px
+        rgba(233,30,99,.25);
 }
 
 .envelope-body:before{
+
     content:"";
+
     position:absolute;
+
     left:0;
+
     bottom:0;
+
     width:0;
+
     height:0;
-    border-left:115px solid transparent;
-    border-right:115px solid transparent;
-    border-bottom:85px solid #d91658;
+
+    border-left:
+        115px solid transparent;
+
+    border-right:
+        115px solid transparent;
+
+    border-bottom:
+        85px solid #d91658;
 }
 
 .flap{
+
     position:absolute;
+
     top:0;
+
     left:0;
+
     width:0;
+
     height:0;
-    border-left:115px solid transparent;
-    border-right:115px solid transparent;
-    border-top:85px solid #ff9abd;
+
+    border-left:
+        115px solid transparent;
+
+    border-right:
+        115px solid transparent;
+
+    border-top:
+        85px solid #ff9abd;
+
     transform-origin:top;
+
     transition:.8s;
+
     z-index:5;
 }
 
 .envelope.open .flap{
-    transform:rotateX(180deg);
+
+    transform:
+        rotateX(180deg);
 }
 
 .seal{
+
     position:absolute;
+
     top:55px;
+
     left:50%;
-    transform:translateX(-50%);
+
+    transform:
+        translateX(-50%);
+
     width:50px;
+
     height:50px;
+
     border-radius:50%;
+
     background:#fff;
+
     display:flex;
+
     justify-content:center;
+
     align-items:center;
+
     font-size:25px;
+
     z-index:8;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+    box-shadow:
+        0 5px 15px
+        rgba(0,0,0,.15);
 }
 
 .open-text{
+
     margin-top:18px;
+
     color:#e91e63;
+
     font-weight:bold;
 }
+
 
 /* =========================
    BOTONES
 ========================= */
 
 .btn{
+
     border:0;
+
     width:100%;
+
     max-width:330px;
-    padding:17px 20px;
+
+    padding:
+        17px
+        20px;
+
     border-radius:50px;
 
-    background:linear-gradient(135deg,#ff4081,#e91e63);
+    background:
+        linear-gradient(
+            135deg,
+            #ff4081,
+            #e91e63
+        );
 
     color:white;
+
     font-size:16px;
+
     font-weight:bold;
 
-    box-shadow:0 12px 25px rgba(233,30,99,.25);
+    box-shadow:
+        0 12px 25px
+        rgba(233,30,99,.25);
 
     cursor:pointer;
+
     transition:.25s;
 
-    margin:10px auto;
+    margin:
+        10px
+        auto;
+
+    display:block;
 }
 
 .btn:active{
+
     transform:scale(.96);
 }
+
 
 /* =========================
    CARTA
 ========================= */
 
 .letter-section{
+
     display:none;
-    padding:20px 18px 70px;
+
+    padding:
+        20px
+        18px
+        70px;
+
     position:relative;
+
     z-index:2;
 }
 
 .letter{
+
     max-width:650px;
+
     margin:auto;
 
-    background:rgba(255,255,255,.92);
+    background:
+        rgba(255,255,255,.92);
+
     border-radius:30px;
 
-    padding:30px 23px;
+    padding:
+        30px
+        23px;
 
     box-shadow:
-        0 25px 70px rgba(70,50,80,.18);
+        0 25px 70px
+        rgba(70,50,80,.18);
 
-    animation:letterAppear 1s ease;
+    animation:
+        letterAppear
+        1s
+        ease;
 }
 
 @keyframes letterAppear{
+
     from{
+
         opacity:0;
-        transform:translateY(40px);
+
+        transform:
+            translateY(40px);
     }
 
     to{
+
         opacity:1;
-        transform:translateY(0);
+
+        transform:
+            translateY(0);
     }
 }
 
 .letter h2{
+
     text-align:center;
+
     color:#e91e63;
+
     margin-bottom:22px;
+
     font-size:28px;
 }
 
 .letter p{
+
     font-size:17px;
+
     line-height:1.8;
+
     margin-bottom:18px;
+
     color:#444;
 }
 
 .signature{
+
     text-align:right;
+
     font-size:21px;
+
     color:#e91e63;
+
     font-weight:bold;
+
     margin-top:30px;
 }
+
 
 /* =========================
    SORPRESA
 ========================= */
 
 .surprise{
+
     display:none;
+
     max-width:650px;
-    margin:25px auto;
-    padding:30px 23px;
+
+    margin:
+        25px
+        auto;
+
+    padding:
+        30px
+        23px;
 
     background:
         linear-gradient(
@@ -387,478 +676,892 @@ body{
 
     text-align:center;
 
-    box-shadow:0 20px 60px rgba(233,30,99,.18);
+    box-shadow:
+        0 20px 60px
+        rgba(233,30,99,.18);
 
-    animation:appear 1s ease;
+    animation:
+        appear
+        1s
+        ease;
 }
 
 .surprise h2{
+
     color:#e91e63;
+
     font-size:30px;
+
     margin-bottom:18px;
 }
 
 .surprise p{
+
     line-height:1.8;
+
     font-size:17px;
 }
+
 
 /* =========================
    FOTOS
 ========================= */
 
 .photo-section{
+
     max-width:650px;
-    margin:35px auto;
-    padding:0 20px;
+
+    margin:
+        40px
+        auto;
+
+    padding:
+        0
+        20px;
 }
 
 .photo-title{
+
     text-align:center;
+
     color:#e91e63;
+
     margin-bottom:20px;
+
+    font-size:26px;
 }
 
 .photos{
+
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:12px;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:15px;
 }
 
-.photo{
-    height:180px;
-    border-radius:20px;
+.real-photo{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    border-radius:22px;
+
+    display:block;
+
+    box-shadow:
+        0 12px 30px
+        rgba(0,0,0,.15);
+
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+
+    cursor:pointer;
+}
+
+.real-photo:hover{
+
+    transform:scale(1.03);
+
+    box-shadow:
+        0 18px 40px
+        rgba(0,0,0,.20);
+}
+
+
+/* =========================
+   FOTO GRANDE
+========================= */
+
+.photo-viewer{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
     background:
-        linear-gradient(
-            135deg,
-            #ffc1d9,
-            #d7ecff
-        );
+        rgba(0,0,0,.88);
 
-    display:flex;
-    justify-content:center;
+    z-index:99999;
+
     align-items:center;
-    color:#fff;
-    font-weight:bold;
-    text-align:center;
 
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    justify-content:center;
+
+    padding:20px;
 }
+
+.photo-viewer img{
+
+    max-width:95%;
+
+    max-height:85vh;
+
+    object-fit:contain;
+
+    border-radius:18px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(0,0,0,.5);
+}
+
+.close-photo{
+
+    position:absolute;
+
+    top:20px;
+
+    right:20px;
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    border:0;
+
+    background:white;
+
+    color:#e91e63;
+
+    font-size:25px;
+
+    cursor:pointer;
+}
+
 
 /* =========================
    FINAL
 ========================= */
 
 .final{
+
     text-align:center;
-    padding:40px 20px 70px;
+
+    padding:
+        40px
+        20px
+        70px;
 }
 
 .final-heart{
+
     font-size:60px;
-    animation:pulse 1.5s infinite;
+
+    animation:
+        pulse
+        1.5s
+        infinite;
 }
 
 .final h2{
+
     color:#e91e63;
-    margin:15px 0;
+
+    margin:
+        15px
+        0;
 }
 
 .final p{
+
     color:#777;
+
+    margin-top:8px;
 }
 
+
 /* =========================
-   EFECTO CLICK
+   CORAZON AL TOCAR
 ========================= */
 
 .click-heart{
+
     position:fixed;
+
     pointer-events:none;
+
     font-size:25px;
+
     z-index:9999;
 
-    animation:clickHeart 1s ease forwards;
+    animation:
+        clickHeart
+        1s
+        ease
+        forwards;
 }
 
 @keyframes clickHeart{
+
     0%{
+
         opacity:1;
-        transform:translate(-50%,-50%) scale(.5);
+
+        transform:
+            translate(-50%,-50%)
+            scale(.5);
     }
 
     100%{
+
         opacity:0;
-        transform:translate(-50%,-130px) scale(1.5);
+
+        transform:
+            translate(-50%,-130px)
+            scale(1.5);
     }
 }
 
+
 /* =========================
-   MOBILE
+   CELULAR
 ========================= */
 
 @media(max-width:600px){
 
     .intro{
+
         padding:15px;
     }
 
     .intro-box{
-        padding:28px 17px 35px;
+
+        padding:
+            28px
+            17px
+            35px;
+
         border-radius:30px;
     }
 
     .title{
+
         font-size:36px;
     }
 
     .subtitle{
+
         font-size:15px;
     }
 
     .character{
+
         font-size:52px;
     }
 
     .big-heart{
+
         font-size:36px;
     }
 
     .letter{
-        padding:27px 20px;
+
+        padding:
+            27px
+            20px;
+
         border-radius:25px;
     }
 
     .letter h2{
+
         font-size:25px;
     }
 
     .letter p{
+
         font-size:16px;
+
         line-height:1.75;
     }
 
     .surprise{
-        padding:27px 20px;
+
+        padding:
+            27px
+            20px;
     }
 
     .photos{
+
         grid-template-columns:1fr;
     }
 
-    .photo{
-        height:210px;
+    .real-photo{
+
+        height:300px;
+
+        border-radius:22px;
     }
 }
 
 </style>
+
 </head>
+
 
 <body>
 
-<!-- CORAZONES DEL FONDO -->
 
-<div class="background-hearts" id="hearts"></div>
+<!-- =========================
+     CORAZONES
+========================= -->
+
+<div
+    class="background-hearts"
+    id="hearts">
+</div>
 
 
 <!-- =========================
-     INTRO
+     PANTALLA PRINCIPAL
 ========================= -->
 
-<section class="intro" id="intro">
+<section
+    class="intro"
+    id="intro">
 
-<div class="intro-box">
-
-<div class="badges">
-    <div class="badge">🎀 MARIA PAULA</div>
-    <div class="badge">🕷️ JAN CARLOS</div>
-</div>
-
-<h1 class="title">
-    MARIA PAULA MI PRINCESA!❤️
-</h1>
-
-<p class="subtitle">
-    Hay personas que llegan a nuestra vida
-    y hacen que todo se sienta diferente.
-</p>
+    <div class="intro-box">
 
 
-<div class="characters">
+        <div class="badges">
 
-    <div class="character">🎀</div>
+            <div class="badge">
+                🎀 Hello Kitty
+            </div>
 
-    <div class="big-heart">❤️</div>
+            <div class="badge">
+                🕷️ Spider-Man
+            </div>
 
-    <div class="character">🕷️</div>
-
-</div>
-
-
-<p class="subtitle">
-    Tengo algo que quiero decirte...
-</p>
-
-
-<div class="envelope-area">
-
-    <div class="envelope" id="envelope">
-
-        <div class="envelope-body"></div>
-
-        <div class="flap"></div>
-
-        <div class="seal">
-            ❤️
         </div>
 
+
+        <h1 class="title">
+            María Paula ❤️
+        </h1>
+
+
+        <p class="subtitle">
+
+            Hay personas que llegan a nuestra vida
+            y hacen que todo se sienta diferente.
+
+        </p>
+
+
+        <div class="characters">
+
+            <div class="character">
+                🎀
+            </div>
+
+            <div class="big-heart">
+                ❤️
+            </div>
+
+            <div class="character">
+                🕷️
+            </div>
+
+        </div>
+
+
+        <p class="subtitle">
+
+            Tengo algo que quiero decirte...
+
+        </p>
+
+
+        <div class="envelope-area">
+
+
+            <div
+                class="envelope"
+                id="envelope">
+
+                <div
+                    class="envelope-body">
+                </div>
+
+                <div
+                    class="flap">
+                </div>
+
+                <div
+                    class="seal">
+
+                    ❤️
+
+                </div>
+
+            </div>
+
+
+            <div class="open-text">
+
+                Toca el sobre 💌
+
+            </div>
+
+
+        </div>
+
+
+        <button
+            class="btn"
+            onclick="openLetter()">
+
+            💌 Abrir mi carta
+
+        </button>
+
+
     </div>
-
-    <div class="open-text">
-        Toca el sobre 💌
-    </div>
-
-</div>
-
-
-<button class="btn" onclick="openLetter()">
-    💌 Abrir mi carta
-</button>
-
-</div>
 
 </section>
+
 
 
 <!-- =========================
      CARTA
 ========================= -->
 
-<section class="letter-section" id="letterSection">
-
-<div class="letter">
-
-<h2>
-    💌 Para María Paula
-</h2>
-
-<p>
-    María Paula,
-</p>
-
-<p>
-    Hay cosas que a veces son difíciles de decir
-    frente a frente, por eso hoy quiero escribirlas.
-</p>
-
-<p>
-    Desde que llegaste a mi vida hay momentos que
-    simplemente se sienten diferentes. Tu forma de ser,
-    tu sonrisa y esos pequeños detalles que quizá para ti
-    parecen insignificantes, para mí pueden significar
-    muchísimo.
-</p>
-
-<p>
-    No sé exactamente en qué momento empezaste a ocupar
-    un lugar tan especial en mis pensamientos, pero sé
-    que cuando pienso en alguien que me importa,
-    apareces tú.
-</p>
-
-<p>
-    Quiero que sepas que cada momento contigo tiene un
-    valor especial para mí. No necesito que todo sea
-    perfecto; solamente quiero poder seguir compartiendo
-    momentos, conversaciones, risas y recuerdos contigo.
-</p>
-
-<p>
-    Si alguna vez dudas de lo importante que eres,
-    recuerda que alguien se tomó el tiempo de crear
-    esta pequeña sorpresa solamente para ti.
-</p>
-
-<p>
-    Porque detrás de esta pantalla hay una persona que
-    quería decirte algo muy sencillo:
-</p>
-
-<p style="text-align:center;font-size:22px;color:#e91e63;font-weight:bold;">
-    Me importas muchísimo. ❤️
-</p>
-
-<p>
-    Y espero que cuando leas esto tengas una sonrisa,
-    porque esa era justamente mi intención.
-</p>
-
-<div class="signature">
-    Con cariño,<br>
-    Jan Carlos ❤️
-</div>
-
-</div>
+<section
+    class="letter-section"
+    id="letterSection">
 
 
-<button class="btn" onclick="showSurprise()">
-    ✨ Tengo otra sorpresa para ti
-</button>
+    <div class="letter">
 
 
-<div class="surprise" id="surprise">
-
-<h2>
-    🥹 Una última cosa...
-</h2>
-
-<p>
-    Si pudiera guardar un momento contigo para repetirlo
-    todas las veces que quisiera, probablemente elegiría
-    uno de esos momentos sencillos en los que simplemente
-    estamos hablando y riéndonos.
-</p>
-
-<br>
-
-<p>
-    Porque muchas veces los momentos más pequeños
-    terminan convirtiéndose en los recuerdos más grandes.
-</p>
-
-<br>
-
-<p style="font-size:23px;color:#e91e63;font-weight:bold;">
-    María Paula... ❤️
-</p>
-
-<p>
-    Gracias por existir y por ser tú.
-</p>
-
-</div>
+        <h2>
+            💌 Para María Paula
+        </h2>
 
 
-<!-- =========================
-     FOTOS
-========================= -->
-
-<div class="photo-section">
-
-<h2 class="photo-title">
-    📸 Nuestros recuerdos
-</h2>
-
-<div class="photos">
-
-    <img src="foto1.jpg" class="real-photo" alt="Nuestro recuerdo">
-
-    <img src="foto2.jpg" class="real-photo" alt="Nuestro recuerdo">
-
-    <img src="foto3.jpg" class="real-photo" alt="Nuestro recuerdo">
-
-    <img src="foto4.jpg" class="real-photo" alt="Nuestro recuerdo">
-
-</div>
-
-<div class="photo">
-
-    <img src="foto1.jpg" class="real-photo" alt="Nuestro recuerdo">
-
-    <img src="foto2.jpg" class="real-photo" alt="Nuestro recuerdo">
-
-    <img src="foto3.jpg" class="real-photo" alt="Nuestro recuerdo">
-
-    <img src="foto4.jpg" class="real-photo" alt="Nuestro recuerdo">
-</div>
-
-</div>
-
-</div>
+        <p>
+            María Paula,
+        </p>
 
 
-<!-- FINAL -->
+        <p>
 
-<div class="final">
+            Hay cosas que a veces son difíciles de decir
+            frente a frente, por eso hoy quiero escribirlas.
 
-<div class="final-heart">
-    ❤️
-</div>
+        </p>
 
-<h2>
-    Siempre tú.
-</h2>
 
-<p>
-    Hecho especialmente para María Paula
-</p>
+        <p>
 
-<p>
-    Con cariño, Jan Carlos ❤️
-</p>
+            Desde que llegaste a mi vida hay momentos que
+            simplemente se sienten diferentes. Tu forma de ser,
+            tu sonrisa y esos pequeños detalles que quizá para ti
+            parecen insignificantes, para mí pueden significar
+            muchísimo.
 
-</div>
+        </p>
+
+
+        <p>
+
+            No sé exactamente en qué momento empezaste a ocupar
+            un lugar tan especial en mis pensamientos, pero sé
+            que cuando pienso en alguien que me importa,
+            apareces tú.
+
+        </p>
+
+
+        <p>
+
+            Quiero que sepas que cada momento contigo tiene un
+            valor especial para mí. No necesito que todo sea
+            perfecto; solamente quiero poder seguir compartiendo
+            momentos, conversaciones, risas y recuerdos contigo.
+
+        </p>
+
+
+        <p>
+
+            Si alguna vez dudas de lo importante que eres,
+            recuerda que alguien se tomó el tiempo de crear
+            esta pequeña sorpresa solamente para ti.
+
+        </p>
+
+
+        <p>
+
+            Porque detrás de esta pantalla hay una persona que
+            quería decirte algo muy sencillo:
+
+        </p>
+
+
+        <p
+            style="
+            text-align:center;
+            font-size:22px;
+            color:#e91e63;
+            font-weight:bold;
+            ">
+
+            Me importas muchísimo. ❤️
+
+        </p>
+
+
+        <p>
+
+            Y espero que cuando leas esto tengas una sonrisa,
+            porque esa era justamente mi intención.
+
+        </p>
+
+
+        <div class="signature">
+
+            Con cariño,<br>
+
+            Jan Carlos ❤️
+
+        </div>
+
+
+    </div>
+
+
+
+    <button
+        class="btn"
+        onclick="showSurprise()">
+
+        ✨ Tengo otra sorpresa para ti
+
+    </button>
+
+
+
+    <!-- =========================
+         SORPRESA
+    ========================= -->
+
+    <div
+        class="surprise"
+        id="surprise">
+
+
+        <h2>
+
+            🥹 Una última cosa...
+
+        </h2>
+
+
+        <p>
+
+            Si pudiera guardar un momento contigo
+            para repetirlo todas las veces que quisiera,
+            probablemente elegiría uno de esos momentos
+            sencillos en los que simplemente estamos
+            hablando y riéndonos.
+
+        </p>
+
+
+        <br>
+
+
+        <p>
+
+            Porque muchas veces los momentos más pequeños
+            terminan convirtiéndose en los recuerdos
+            más grandes.
+
+        </p>
+
+
+        <br>
+
+
+        <p
+            style="
+            font-size:23px;
+            color:#e91e63;
+            font-weight:bold;
+            ">
+
+            María Paula... ❤️
+
+        </p>
+
+
+        <p>
+
+            Gracias por existir y por ser tú.
+
+        </p>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         FOTOS
+    ========================= -->
+
+    <div class="photo-section">
+
+
+        <h2 class="photo-title">
+
+            📸 Nuestros recuerdos
+
+        </h2>
+
+
+        <div class="photos">
+
+
+            <img
+                src="foto1.jpg"
+                class="real-photo"
+                alt="Nuestro recuerdo"
+                onclick="openPhoto(this.src)">
+
+
+            <img
+                src="foto2.jpg"
+                class="real-photo"
+                alt="Nuestro recuerdo"
+                onclick="openPhoto(this.src)">
+
+
+            <img
+                src="foto3.jpg"
+                class="real-photo"
+                alt="Nuestro recuerdo"
+                onclick="openPhoto(this.src)">
+
+
+            <img
+                src="foto4.jpg"
+                class="real-photo"
+                alt="Nuestro recuerdo"
+                onclick="openPhoto(this.src)">
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         FINAL
+    ========================= -->
+
+    <div class="final">
+
+
+        <div class="final-heart">
+
+            ❤️
+
+        </div>
+
+
+        <h2>
+
+            Siempre tú.
+
+        </h2>
+
+
+        <p>
+
+            Hecho especialmente para María Paula
+
+        </p>
+
+
+        <p>
+
+            Con cariño, Jan Carlos ❤️
+
+        </p>
+
+
+    </div>
+
 
 </section>
 
 
+
+<!-- =========================
+     VISOR DE FOTOS
+========================= -->
+
+<div
+    class="photo-viewer"
+    id="photoViewer">
+
+
+    <button
+        class="close-photo"
+        onclick="closePhoto()">
+
+        ×
+
+    </button>
+
+
+    <img
+        id="bigPhoto"
+        src=""
+        alt="Foto">
+
+</div>
+
+
+
 <script>
 
+
 /* =========================
-   CORAZONES DE FONDO
+   CORAZONES
 ========================= */
 
 const heartsContainer =
     document.getElementById("hearts");
 
-const heartSymbols =
-    ["❤️","💕","💗","💖","💘","💞","🌸"];
+
+const heartSymbols = [
+
+    "❤️",
+    "💕",
+    "💗",
+    "💖",
+    "💘",
+    "💞",
+    "🌸"
+
+];
+
 
 function createHeart(){
+
 
     const heart =
         document.createElement("div");
 
-    heart.className="heart";
+
+    heart.className =
+        "heart";
+
 
     heart.innerHTML =
         heartSymbols[
             Math.floor(
-                Math.random()*heartSymbols.length
+                Math.random()
+                *
+                heartSymbols.length
             )
         ];
 
+
     heart.style.left =
-        Math.random()*100+"%";
+        Math.random()
+        *
+        100
+        +
+        "%";
+
 
     heart.style.fontSize =
-        (12 + Math.random()*20)+"px";
+        (
+            12
+            +
+            Math.random()
+            *
+            20
+        )
+        +
+        "px";
+
 
     heart.style.animationDuration =
-        (5 + Math.random()*7)+"s";
+        (
+            5
+            +
+            Math.random()
+            *
+            7
+        )
+        +
+        "s";
 
-    heartsContainer.appendChild(heart);
 
-    setTimeout(()=>{
-        heart.remove();
-    },13000);
+    heartsContainer.appendChild(
+        heart
+    );
+
+
+    setTimeout(
+        () => {
+            heart.remove();
+        },
+        13000
+    );
+
 }
 
-setInterval(createHeart,500);
+
+setInterval(
+    createHeart,
+    500
+);
+
 
 
 /* =========================
-   ABRIR SOBRE
+   SOBRE
 ========================= */
 
 const envelope =
-    document.getElementById("envelope");
+    document.getElementById(
+        "envelope"
+    );
 
-envelope.addEventListener("click",()=>{
 
-    envelope.classList.toggle("open");
+envelope.addEventListener(
+    "click",
+    () => {
 
-});
+        envelope.classList.toggle(
+            "open"
+        );
+
+    }
+);
+
 
 
 /* =========================
@@ -867,22 +1570,37 @@ envelope.addEventListener("click",()=>{
 
 function openLetter(){
 
-    envelope.classList.add("open");
 
-    setTimeout(()=>{
+    envelope.classList.add(
+        "open"
+    );
 
-        const section =
-            document.getElementById("letterSection");
 
-        section.style.display="block";
+    setTimeout(
+        () => {
 
-        section.scrollIntoView({
-            behavior:"smooth"
-        });
 
-    },600);
+            const section =
+                document.getElementById(
+                    "letterSection"
+                );
+
+
+            section.style.display =
+                "block";
+
+
+            section.scrollIntoView({
+                behavior:"smooth"
+            });
+
+
+        },
+        600
+    );
 
 }
+
 
 
 /* =========================
@@ -891,93 +1609,242 @@ function openLetter(){
 
 function showSurprise(){
 
-    const surprise =
-        document.getElementById("surprise");
 
-    surprise.style.display="block";
+    const surprise =
+        document.getElementById(
+            "surprise"
+        );
+
+
+    surprise.style.display =
+        "block";
+
 
     surprise.scrollIntoView({
         behavior:"smooth"
     });
+
 
     createExplosion();
 
 }
 
 
+
 /* =========================
-   EXPLOSIÓN DE CORAZONES
+   EXPLOSIÓN
 ========================= */
 
 function createExplosion(){
 
-    for(let i=0;i<25;i++){
+
+    for(
+        let i=0;
+        i<25;
+        i++
+    ){
+
 
         const heart =
-            document.createElement("div");
+            document.createElement(
+                "div"
+            );
 
-        heart.className="click-heart";
+
+        heart.className =
+            "click-heart";
+
 
         heart.innerHTML =
             heartSymbols[
                 Math.floor(
-                    Math.random()*heartSymbols.length
+                    Math.random()
+                    *
+                    heartSymbols.length
                 )
             ];
 
+
         heart.style.left =
-            (40 + Math.random()*20)+"%";
+            (
+                40
+                +
+                Math.random()
+                *
+                20
+            )
+            +
+            "%";
+
 
         heart.style.top =
-            (45 + Math.random()*10)+"%";
+            (
+                45
+                +
+                Math.random()
+                *
+                10
+            )
+            +
+            "%";
+
 
         heart.style.animationDuration =
-            (0.8 + Math.random()*1.2)+"s";
+            (
+                .8
+                +
+                Math.random()
+                *
+                1.2
+            )
+            +
+            "s";
 
-        document.body.appendChild(heart);
 
-        setTimeout(()=>{
-            heart.remove();
-        },2000);
+        document.body.appendChild(
+            heart
+        );
+
+
+        setTimeout(
+            () => {
+                heart.remove();
+            },
+            2000
+        );
+
     }
+
 }
 
 
+
 /* =========================
-   CORAZÓN AL TOCAR PANTALLA
+   VISOR DE FOTOS
 ========================= */
 
-document.addEventListener("click",(event)=>{
+function openPhoto(
+    imageSource
+){
 
-    if(
-        event.target.tagName === "BUTTON" ||
-        event.target.closest(".envelope")
-    ){
-        return;
+
+    const viewer =
+        document.getElementById(
+            "photoViewer"
+        );
+
+
+    const bigPhoto =
+        document.getElementById(
+            "bigPhoto"
+        );
+
+
+    bigPhoto.src =
+        imageSource;
+
+
+    viewer.style.display =
+        "flex";
+
+}
+
+
+
+function closePhoto(){
+
+
+    const viewer =
+        document.getElementById(
+            "photoViewer"
+        );
+
+
+    viewer.style.display =
+        "none";
+
+}
+
+
+
+/* =========================
+   CORAZÓN AL TOCAR
+========================= */
+
+document.addEventListener(
+    "click",
+    (event) => {
+
+
+        if(
+
+            event.target.tagName
+            ===
+            "BUTTON"
+
+            ||
+
+            event.target.closest(
+                ".envelope"
+            )
+
+            ||
+
+            event.target.closest(
+                ".real-photo"
+            )
+
+        ){
+
+            return;
+
+        }
+
+
+        const heart =
+            document.createElement(
+                "div"
+            );
+
+
+        heart.className =
+            "click-heart";
+
+
+        heart.innerHTML =
+            "❤️";
+
+
+        heart.style.left =
+            event.clientX
+            +
+            "px";
+
+
+        heart.style.top =
+            event.clientY
+            +
+            "px";
+
+
+        document.body.appendChild(
+            heart
+        );
+
+
+        setTimeout(
+            () => {
+                heart.remove();
+            },
+            1000
+        );
+
     }
-
-    const heart =
-        document.createElement("div");
-
-    heart.className="click-heart";
-
-    heart.innerHTML="❤️";
-
-    heart.style.left =
-        event.clientX+"px";
-
-    heart.style.top =
-        event.clientY+"px";
-
-    document.body.appendChild(heart);
-
-    setTimeout(()=>{
-        heart.remove();
-    },1000);
-
-});
+);
 
 </script>
 
+
 </body>
+
 </html>
