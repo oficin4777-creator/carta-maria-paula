@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Para María Paula ❤️</title>
+
+<style>
+
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(circle at top left, #ffd7e8, transparent 35%),
+        radial-gradient(circle at bottom right, #cfe2ff, transparent 35%),
+        linear-gradient(135deg, #fff0f6, #e8f1ff);
+
+    overflow-x: hidden;
+    color: #333;
+}
+
+/* =========================
+   CORAZONES FLOTANDO
+========================= */
+
+.hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.heart {
+    position: absolute;
+    bottom: -50px;
+    font-size: 25px;
+    animation: subir 9s linear infinite;
+    opacity: 0.7;
+}
+
+.heart:nth-child(1) {
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.heart:nth-child(2) {
+    left: 18%;
+    animation-delay: 2s;
+}
+
+.heart:nth-child(3) {
+    left: 35%;
+    animation-delay: 4s;
+}
+
+.heart:nth-child(4) {
+    left: 52%;
+    animation-delay: 1s;
+}
+
+.heart:nth-child(5) {
+    left: 70%;
+    animation-delay: 3s;
+}
+
+.heart:nth-child(6) {
+    left: 85%;
+    animation-delay: 5s;
+}
+
+@keyframes subir {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-115vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.container {
+    position: relative;
+    z-index: 2;
+
+    width: 92%;
+    max-width: 850px;
+
+    margin: 35px auto;
+
+    background: rgba(255,255,255,0.92);
+
+    border-radius: 30px;
+
+    padding: 30px 25px;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.15);
+
+    text-align: center;
+
+    border: 2px solid rgba(255,255,255,0.8);
+}
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+.badges {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.kitty {
+    background: #ffc8df;
+    color: #9c2457;
+}
+
+.spiderman {
+    background: #dce8ff;
+    color: #214d99;
+}
+
+h1 {
+    margin-top: 25px;
+
+    font-size: clamp(40px, 8vw, 70px);
+
+    color: #e83f79;
+
+    text-shadow:
+        3px 3px 0 white,
+        0 5px 20px rgba(232,63,121,0.2);
+}
+
+.subtitle {
+    margin-top: 10px;
+
+    font-size: 18px;
+
+    color: #777;
+
+    line-height: 1.5;
+}
+
+/* =========================
+   PERSONAJES / DECORACIÓN
+========================= */
+
+.characters {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 25px;
+
+    margin: 30px 0;
+}
+
+.character {
+    width: 125px;
+    height: 125px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 65px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.12);
+
+    transition: 0.3s;
+}
+
+.character:hover {
+    transform: scale(1.1) rotate(3deg);
+}
+
+.hello {
+    background: #ffd2e4;
+}
+
+.spider {
+    background: #dce9ff;
+}
+
+.love {
+    font-size: 40px;
+
+    animation: latido 1.2s infinite;
+}
+
+@keyframes latido {
+
+    0%,100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+}
+
+/* =========================
+   BOTÓN
+========================= */
+
+.open-button {
+
+    margin-top: 20px;
+
+    border: none;
+
+    padding: 16px 30px;
+
+    border-radius: 40px;
+
+    background: linear-gradient(
+        135deg,
+        #e83f79,
+        #ff6799
+    );
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(232,63,121,0.35);
+
+    transition: 0.3s;
+}
+
+.open-button:hover {
+    transform: translateY(-3px) scale(1.04);
+}
+
+.open-button:active {
+    transform: scale(0.97);
+}
+
+/* =========================
+   CARTA
+========================= */
+
+.letter {
+
+    display: none;
+
+    margin-top: 30px;
+
+    padding: 30px;
+
+    text-align: left;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,0.95),
+            rgba(255,247,251,0.95)
+        );
+
+    border-radius: 25px;
+
+    border: 2px solid #ffc5db;
+
+    box-shadow:
+        inset 0 0 30px rgba(255,130,180,0.08);
+
+    line-height: 1.8;
+
+    font-size: 17px;
+}
+
+.letter.show {
+
+    display: block;
+
+    animation:
+        aparecer 1s ease;
+}
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.letter h2 {
+
+    text-align: center;
+
+    color: #e83f79;
+
+    margin-bottom: 25px;
+}
+
+.letter p {
+    margin-bottom: 18px;
+}
+
+.highlight {
+
+    color: #e83f79;
+
+    font-weight: bold;
+}
+
+.signature {
+
+    text-align: right;
+
+    color: #e83f79;
+
+    font-size: 23px;
+
+    font-weight: bold;
+
+    margin-top: 30px;
+}
+
+/* =========================
+   SORPRESA
+========================= */
+
+.surprise {
+
+    display: none;
+
+    margin-top: 25px;
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    background: #fff0f6;
+
+    text-align: center;
+
+    font-size: 20px;
+
+    color: #d62f69;
+}
+
+.surprise.show {
+    display: block;
+
+    animation: aparecer 0.8s ease;
+}
+
+/* =========================
+   WEB DECORATIVA
+========================= */
+
+.web-decoration {
+
+    margin: 35px auto 20px;
+
+    width: 80%;
+
+    height: 3px;
+
+    background:
+        repeating-linear-gradient(
+            45deg,
+            #cbdcff 0px,
+            #cbdcff 10px,
+            transparent 10px,
+            transparent 20px
+        );
+
+    border-radius: 20px;
+}
+
+/* =========================
+   PIE
+========================= */
+
+.footer {
+
+    margin-top: 20px;
+
+    font-size: 13px;
+
+    color: #888;
+}
+
+/* =========================
+   RESPONSIVE CELULAR
+========================= */
+
+@media(max-width:600px) {
+
+    .container {
+        margin: 15px auto;
+        padding: 25px 17px;
+        border-radius: 24px;
+    }
+
+    .characters {
+        gap: 12px;
+    }
+
+    .character {
+        width: 95px;
+        height: 95px;
+        font-size: 48px;
+    }
+
+    .love {
+        font-size: 30px;
+    }
+
+    .letter {
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 45px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- =========================
+     CORAZONES
+========================= -->
+
+<div class="hearts">
+
+    <div class="heart">❤️</div>
+    <div class="heart">💗</div>
+    <div class="heart">💕</div>
+    <div class="heart">💖</div>
+    <div class="heart">❤️</div>
+    <div class="heart">💗</div>
+
+</div>
+
+
+<!-- =========================
+     CONTENIDO PRINCIPAL
+========================= -->
+
+<div class="container">
+
+
+    <!-- ETIQUETAS -->
+
+    <div class="badges">
+
+        <div class="badge kitty">
+            🎀 Hello Kitty
+        </div>
+
+        <div class="badge spiderman">
+            🕷️ Spider-Man
+        </div>
+
+    </div>
+
+
+    <!-- NOMBRE -->
+
+    <h1>
+        María Paula ❤️
+    </h1>
+
+
+    <p class="subtitle">
+
+        Hay personas que llegan a nuestra vida
+        y hacen que todo se sienta diferente.
+
+    </p>
+
+
+    <!-- DECORACIÓN -->
+
+    <div class="characters">
+
+        <div class="character hello">
+            🎀
+        </div>
+
+        <div class="love">
+            ❤️
+        </div>
+
+        <div class="character spider">
+            🕷️
+        </div>
+
+    </div>
+
+
+    <h2>
+        Una carta de Jan Carlos para ti
+    </h2>
+
+
+    <!-- BOTÓN -->
+
+    <button
+        class="open-button"
+        onclick="abrirCarta()">
+
+        💌 Abrir mi carta
+
+    </button>
+
+
+    <!-- =========================
+         CARTA
+    ========================= -->
+
+    <div
+        id="carta"
+        class="letter">
+
+
+        <h2>
+            Para la persona que hace
+            mis días más bonitos ❤️
+        </h2>
+
+
+        <p>
+            Mi querida <span class="highlight">
+            María Paula
+            </span>:
+        </p>
+
+
+        <p>
+
+            Quería hacerte algo diferente.
+            Algo que pudieras abrir y que,
+            aunque fuera por unos minutos,
+            te sacara una sonrisa.
+
+        </p>
+
+
+        <p>
+
+            Pensé en hacer esta pequeña carta
+            porque hay cosas que a veces son
+            difíciles de decir en persona,
+            pero que uno lleva dentro y quiere
+            expresar de alguna manera.
+
+        </p>
+
+
+        <p>
+
+            María Paula, quiero que sepas que
+            eres una persona muy especial para mí.
+            Me encanta tu forma de ser,
+            tus detalles, tus ocurrencias
+            y esa manera tan tuya de hacer
+            que un momento normal pueda
+            convertirse en un recuerdo bonito.
+
+        </p>
+
+
+        <p>
+
+            Quise poner un poquito de
+            <span class="highlight">
+            Hello Kitty 🎀
+            </span>
+            porque representa ese lado tierno,
+            dulce y bonito que quería transmitir
+            en esta carta.
+
+        </p>
+
+
+        <p>
+
+            Y también puse un poquito de
+            <span class="highlight">
+            Spider-Man 🕷️
+            </span>
+            porque, si tuviera sus poderes,
+            probablemente usaría mis telarañas
+            para llegar rápidamente hasta donde
+            estás y darte uno de esos abrazos
+            que dicen más que mil palabras.
+
+        </p>
+
+
+        <p>
+
+            Si pudiera detener el tiempo,
+            elegiría algunos de nuestros momentos
+            para quedarme ahí un poquito más.
+
+        </p>
+
+
+        <p>
+
+            Si pudiera pedir un deseo,
+            pediría seguir creando momentos
+            contigo.
+
+        </p>
+
+
+        <p>
+
+            Y si pudiera resumir todo lo que
+            quiero decirte en una sola frase,
+            sería esta:
+
+        </p>
+
+
+        <p
+            class="highlight"
+            style="
+                text-align:center;
+                font-size:22px;
+            ">
+
+            "Me haces muy feliz y eres
+            alguien demasiado especial para mí." ❤️
+
+        </p>
+
+
+        <p>
+
+            No sé qué nos depare el futuro,
+            pero sí sé que me gusta tenerte
+            en mi presente.
+
+        </p>
+
+
+        <p>
+
+            Gracias por cada conversación,
+            cada sonrisa, cada detalle y
+            cada momento compartido.
+
+        </p>
+
+
+        <p>
+
+            Esta página quizá sea pequeña,
+            pero todo lo que representa
+            viene con muchísimo cariño.
+
+        </p>
+
+
+        <p>
+
+            Espero que cuando termines de leerla
+            tengas una sonrisa en tu rostro,
+            porque ese era justamente mi objetivo.
+
+        </p>
+
+
+        <p>
+
+            Con muchísimo cariño,
+
+        </p>
+
+
+        <p class="signature">
+
+            Jan Carlos ❤️
+
+        </p>
+
+
+    </div>
+
+
+    <!-- =========================
+         BOTÓN SORPRESA
+    ========================= -->
+
+    <div
+        id="sorpresa"
+        class="surprise">
+
+        🎀 🕷️ ❤️
+
+        <br><br>
+
+        María Paula...
+
+        <br>
+
+        <strong>
+            Eres mi persona especial. ❤️
+        </strong>
+
+        <br><br>
+
+        Y sí...
+
+        <br>
+
+        ¡Esta carta era solamente para ti! 💕
+
+    </div>
+
+
+    <div class="web-decoration"></div>
+
+
+    <button
+        class="open-button"
+        onclick="mostrarSorpresa()">
+
+        ✨ Tengo una sorpresa para ti
+
+    </button>
+
+
+    <div class="footer">
+
+        Hecho especialmente para María Paula
+        <br>
+        Con cariño, Jan Carlos ❤️
+
+    </div>
+
+
+</div>
+
+
+<script>
+
+/* =========================
+   ABRIR CARTA
+========================= */
+
+function abrirCarta() {
+
+    const carta = document.getElementById("carta");
+
+    carta.classList.add("show");
+
+    const boton = document.querySelector(
+        ".open-button"
+    );
+
+    boton.innerHTML =
+        "❤️ Carta abierta";
+
+    boton.disabled = true;
+
+    // Desplazar suavemente hacia la carta
+
+    setTimeout(function() {
+
+        carta.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    }, 300);
+
+}
+
+
+/* =========================
+   MOSTRAR SORPRESA
+========================= */
+
+function mostrarSorpresa() {
+
+    const sorpresa =
+        document.getElementById("sorpresa");
+
+    sorpresa.classList.add("show");
+
+    sorpresa.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
+}
+
+
+/* =========================
+   LLUVIA DE CORAZONES AL ABRIR
+========================= */
+
+function lluviaCorazones() {
+
+    for(let i = 0; i < 25; i++) {
+
+        const heart =
+            document.createElement("div");
+
+        heart.innerHTML = "❤️";
+
+        heart.style.position = "fixed";
+        heart.style.left =
+            Math.random() * 100 + "%";
+
+        heart.style.top = "-30px";
+
+        heart.style.fontSize =
+            (15 + Math.random() * 25) + "px";
+
+        heart.style.zIndex = "999";
+
+        heart.style.pointerEvents = "none";
+
+        document.body.appendChild(heart);
+
+
+        const duration =
+            2000 + Math.random() * 2500;
+
+
+        heart.animate(
+
+            [
+                {
+                    transform:
+                        "translateY(0) rotate(0deg)",
+                    opacity: 1
+                },
+
+                {
+                    transform:
+                        "translateY(110vh) rotate(360deg)",
+                    opacity: 0
+                }
+            ],
+
+            {
+                duration: duration,
+                easing: "ease-in"
+            }
+
+        );
+
+
+        setTimeout(function() {
+
+            heart.remove();
+
+        }, duration);
+
+    }
+
+}
+
+
+/* =========================
+   ACTIVAR LLUVIA AL ABRIR
+========================= */
+
+const botonCarta =
+    document.querySelector(".open-button");
+
+botonCarta.addEventListener(
+    "click",
+    lluviaCorazones
+);
+
+</script>
+
+</body>
+</html>
