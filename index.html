@@ -5,16 +5,15 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Para María Paula ❤️</title>
 
 <style>
 
-/* =====================================
+/* =========================================
    CONFIGURACIÓN GENERAL
-===================================== */
+========================================= */
 
 * {
     margin: 0;
@@ -29,54 +28,61 @@ html {
 body {
     font-family: Arial, Helvetica, sans-serif;
 
-    background:
-        radial-gradient(
-            circle at 15% 10%,
-            #ffd6e7 0%,
-            transparent 35%
-        ),
-        radial-gradient(
-            circle at 90% 20%,
-            #cce7ff 0%,
-            transparent 35%
-        ),
-        linear-gradient(
-            135deg,
-            #ffe5ef,
-            #e9f5ff,
-            #fff0f7
-        );
-
     min-height: 100vh;
 
     color: #333;
 
     overflow-x: hidden;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            #ffd1e3 0%,
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 90% 20%,
+            #cde8ff 0%,
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #ffe5ef,
+            #eaf6ff,
+            #fff0f7
+        );
 }
 
 
-/* =====================================
-   CORAZONES FLOTANTES
-===================================== */
+/* =========================================
+   CORAZONES DEL FONDO
+========================================= */
 
 .background-hearts {
     position: fixed;
+
     inset: 0;
+
     pointer-events: none;
+
     overflow: hidden;
+
     z-index: 0;
 }
 
 .heart {
     position: absolute;
-    bottom: -50px;
+
+    bottom: -60px;
+
+    opacity: 0;
 
     animation:
         floatHeart
         linear
         infinite;
-
-    opacity: 0.7;
 }
 
 @keyframes floatHeart {
@@ -90,7 +96,7 @@ body {
     }
 
     15% {
-        opacity: 0.8;
+        opacity: .8;
     }
 
     100% {
@@ -103,9 +109,9 @@ body {
 }
 
 
-/* =====================================
-   PANTALLA PRINCIPAL
-===================================== */
+/* =========================================
+   PORTADA
+========================================= */
 
 .intro {
 
@@ -113,9 +119,9 @@ body {
 
     display: flex;
 
-    align-items: center;
-
     justify-content: center;
+
+    align-items: center;
 
     padding: 20px;
 
@@ -128,16 +134,16 @@ body {
 
     width: 100%;
 
-    max-width: 440px;
-
-    text-align: center;
+    max-width: 450px;
 
     padding: 35px 22px 40px;
+
+    text-align: center;
 
     border-radius: 35px;
 
     background:
-        rgba(255,255,255,0.82);
+        rgba(255,255,255,.84);
 
     backdrop-filter:
         blur(18px);
@@ -147,12 +153,12 @@ body {
 
     box-shadow:
         0 25px 70px
-        rgba(120,70,100,0.20),
+        rgba(120,70,100,.20);
 
-        inset 0 0 0 1px
-        rgba(255,255,255,0.8);
-
-    animation: entrance 1.2s ease;
+    animation:
+        entrance
+        1s
+        ease;
 }
 
 @keyframes entrance {
@@ -162,7 +168,7 @@ body {
 
         transform:
             translateY(35px)
-            scale(0.95);
+            scale(.95);
     }
 
     to {
@@ -175,9 +181,9 @@ body {
 }
 
 
-/* =====================================
+/* =========================================
    ETIQUETAS
-===================================== */
+========================================= */
 
 .badges {
 
@@ -187,59 +193,59 @@ body {
 
     gap: 10px;
 
-    margin-bottom: 18px;
-
     flex-wrap: wrap;
+
+    margin-bottom: 18px;
 }
 
 .badge {
+
+    background: white;
 
     padding: 8px 14px;
 
     border-radius: 30px;
 
-    background: white;
-
-    box-shadow:
-        0 6px 18px
-        rgba(0,0,0,0.08);
-
     font-size: 13px;
 
     font-weight: bold;
+
+    box-shadow:
+        0 6px 18px
+        rgba(0,0,0,.08);
 }
 
 
-/* =====================================
-   TITULO
-===================================== */
+/* =========================================
+   TÍTULO
+========================================= */
 
 .title {
 
-    font-size: 43px;
-
     color: #e91e63;
+
+    font-size: 43px;
 
     margin-bottom: 12px;
 
     text-shadow:
         0 4px 15px
-        rgba(233,30,99,0.18);
+        rgba(233,30,99,.18);
 }
 
 .subtitle {
 
     color: #666;
 
-    line-height: 1.6;
-
     font-size: 16px;
+
+    line-height: 1.6;
 }
 
 
-/* =====================================
+/* =========================================
    PERSONAJES
-===================================== */
+========================================= */
 
 .characters {
 
@@ -259,7 +265,7 @@ body {
     filter:
         drop-shadow(
             0 8px 10px
-            rgba(0,0,0,0.12)
+            rgba(0,0,0,.12)
         );
 
     animation:
@@ -271,7 +277,17 @@ body {
 
 .character:last-child {
 
-    animation-delay: 0.5s;
+    animation-delay: .5s;
+}
+
+.big-heart {
+
+    font-size: 45px;
+
+    animation:
+        heartbeat
+        1.4s
+        infinite;
 }
 
 @keyframes floating {
@@ -289,16 +305,6 @@ body {
     }
 }
 
-.big-heart {
-
-    font-size: 45px;
-
-    animation:
-        heartbeat
-        1.4s
-        infinite;
-}
-
 @keyframes heartbeat {
 
     0%, 100% {
@@ -311,22 +317,20 @@ body {
 }
 
 
-/* =====================================
+/* =========================================
    SOBRE
-===================================== */
+========================================= */
 
 .envelope-area {
 
     margin: 30px auto;
-
-    perspective: 900px;
 }
 
 .envelope {
 
-    width: 230px;
+    width: 240px;
 
-    height: 155px;
+    height: 160px;
 
     margin: auto;
 
@@ -334,12 +338,20 @@ body {
 
     cursor: pointer;
 
-    transition: 0.5s;
+    transition:
+        transform .3s ease;
+
+    filter:
+        drop-shadow(
+            0 15px 20px
+            rgba(233,30,99,.20)
+        );
 }
 
 .envelope:hover {
 
-    transform: scale(1.04);
+    transform:
+        scale(1.04);
 }
 
 .envelope-body {
@@ -351,15 +363,13 @@ body {
     background:
         linear-gradient(
             145deg,
-            #ff6fa3,
+            #ff70a5,
             #e91e63
         );
 
     border-radius: 8px;
 
-    box-shadow:
-        0 18px 40px
-        rgba(233,30,99,0.25);
+    overflow: hidden;
 }
 
 .envelope-body::before {
@@ -377,13 +387,13 @@ body {
     height: 0;
 
     border-left:
-        115px solid transparent;
+        120px solid transparent;
 
     border-right:
-        115px solid transparent;
+        120px solid transparent;
 
     border-bottom:
-        85px solid #d91658;
+        90px solid #d91658;
 }
 
 .flap {
@@ -399,17 +409,18 @@ body {
     height: 0;
 
     border-left:
-        115px solid transparent;
+        120px solid transparent;
 
     border-right:
-        115px solid transparent;
+        120px solid transparent;
 
     border-top:
-        85px solid #ff9abd;
+        88px solid #ff9abd;
 
     transform-origin: top;
 
-    transition: 0.8s;
+    transition:
+        transform .8s ease;
 
     z-index: 5;
 }
@@ -424,20 +435,20 @@ body {
 
     position: absolute;
 
-    top: 55px;
+    top: 58px;
 
     left: 50%;
 
     transform:
         translateX(-50%);
 
-    width: 50px;
+    width: 52px;
 
-    height: 50px;
-
-    border-radius: 50%;
+    height: 52px;
 
     background: white;
+
+    border-radius: 50%;
 
     display: flex;
 
@@ -445,13 +456,13 @@ body {
 
     align-items: center;
 
-    font-size: 25px;
+    font-size: 26px;
 
-    z-index: 8;
+    z-index: 10;
 
     box-shadow:
         0 5px 15px
-        rgba(0,0,0,0.15);
+        rgba(0,0,0,.15);
 }
 
 .open-text {
@@ -464,19 +475,23 @@ body {
 }
 
 
-/* =====================================
+/* =========================================
    BOTONES
-===================================== */
+========================================= */
 
 .btn {
 
-    border: none;
-
     width: 100%;
 
-    max-width: 330px;
+    max-width: 340px;
+
+    margin: 12px auto;
+
+    display: block;
 
     padding: 17px 20px;
+
+    border: none;
 
     border-radius: 50px;
 
@@ -493,46 +508,44 @@ body {
 
     font-weight: bold;
 
-    box-shadow:
-        0 12px 25px
-        rgba(233,30,99,0.25);
-
     cursor: pointer;
 
-    transition: 0.25s;
+    box-shadow:
+        0 12px 25px
+        rgba(233,30,99,.25);
 
-    margin: 10px auto;
-
-    display: block;
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
 }
 
 .btn:hover {
 
-    transform: translateY(-2px);
+    transform:
+        translateY(-2px);
 
     box-shadow:
-        0 16px 30px
-        rgba(233,30,99,0.30);
+        0 17px 35px
+        rgba(233,30,99,.30);
 }
 
 .btn:active {
 
-    transform: scale(0.96);
+    transform:
+        scale(.96);
 }
 
 
-/* =====================================
-   SECCIÓN CARTA
-===================================== */
+/* =========================================
+   SECCIÓN DE LA CARTA
+========================================= */
 
 .letter-section {
 
     display: none;
 
     padding:
-        20px
-        18px
-        70px;
+        25px 18px 70px;
 
     position: relative;
 
@@ -545,21 +558,22 @@ body {
 
     margin: auto;
 
-    background:
-        rgba(255,255,255,0.94);
+    padding:
+        32px 25px;
 
     border-radius: 30px;
 
-    padding:
-        32px 24px;
+    background:
+        rgba(255,255,255,.95);
 
     box-shadow:
         0 25px 70px
-        rgba(70,50,80,0.18);
+        rgba(70,50,80,.18);
 
     animation:
         letterAppear
-        1s ease;
+        1s
+        ease;
 }
 
 @keyframes letterAppear {
@@ -587,39 +601,52 @@ body {
 
     color: #e91e63;
 
-    margin-bottom: 25px;
-
     font-size: 29px;
+
+    margin-bottom: 25px;
 }
 
 .letter p {
+
+    color: #444;
 
     font-size: 17px;
 
     line-height: 1.8;
 
     margin-bottom: 18px;
+}
 
-    color: #444;
+.highlight {
+
+    text-align: center;
+
+    color: #e91e63 !important;
+
+    font-size: 23px !important;
+
+    font-weight: bold;
+
+    margin: 25px 0;
 }
 
 .signature {
 
-    text-align: right;
+    margin-top: 30px;
 
-    font-size: 21px;
+    text-align: right;
 
     color: #e91e63;
 
-    font-weight: bold;
+    font-size: 21px;
 
-    margin-top: 30px;
+    font-weight: bold;
 }
 
 
-/* =====================================
+/* =========================================
    SORPRESA
-===================================== */
+========================================= */
 
 .surprise {
 
@@ -631,26 +658,27 @@ body {
         30px auto;
 
     padding:
-        32px 24px;
+        32px 25px;
+
+    text-align: center;
+
+    border-radius: 30px;
 
     background:
         linear-gradient(
             135deg,
-            rgba(255,255,255,0.96),
-            rgba(255,235,244,0.96)
+            rgba(255,255,255,.97),
+            rgba(255,235,244,.97)
         );
-
-    border-radius: 30px;
-
-    text-align: center;
 
     box-shadow:
         0 20px 60px
-        rgba(233,30,99,0.18);
+        rgba(233,30,99,.18);
 
     animation:
         entrance
-        1s ease;
+        1s
+        ease;
 }
 
 .surprise h2 {
@@ -659,27 +687,27 @@ body {
 
     font-size: 30px;
 
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
 .surprise p {
 
-    line-height: 1.8;
-
     font-size: 17px;
+
+    line-height: 1.8;
 }
 
 
-/* =====================================
-   GALERÍA DE FOTOS
-===================================== */
+/* =========================================
+   GALERÍA
+========================================= */
 
 .photo-section {
 
     max-width: 650px;
 
     margin:
-        45px auto;
+        50px auto;
 
     padding:
         0 20px;
@@ -691,9 +719,9 @@ body {
 
     color: #e91e63;
 
-    margin-bottom: 22px;
-
     font-size: 27px;
+
+    margin-bottom: 22px;
 }
 
 .photos {
@@ -714,34 +742,35 @@ body {
 
     object-fit: cover;
 
-    display: block;
-
     border-radius: 22px;
 
-    box-shadow:
-        0 12px 30px
-        rgba(0,0,0,0.15);
+    display: block;
 
     cursor: pointer;
 
+    box-shadow:
+        0 12px 30px
+        rgba(0,0,0,.15);
+
     transition:
-        transform 0.4s ease,
-        box-shadow 0.4s ease;
+        transform .4s ease,
+        box-shadow .4s ease;
 }
 
 .real-photo:hover {
 
-    transform: scale(1.03);
+    transform:
+        scale(1.03);
 
     box-shadow:
         0 18px 40px
-        rgba(0,0,0,0.20);
+        rgba(0,0,0,.20);
 }
 
 
-/* =====================================
-   VISOR DE FOTOS
-===================================== */
+/* =========================================
+   FOTO EN PANTALLA COMPLETA
+========================================= */
 
 .photo-viewer {
 
@@ -751,14 +780,14 @@ body {
 
     inset: 0;
 
-    background:
-        rgba(0,0,0,0.90);
-
     z-index: 99999;
 
-    align-items: center;
+    background:
+        rgba(0,0,0,.92);
 
     justify-content: center;
+
+    align-items: center;
 
     padding: 20px;
 }
@@ -775,7 +804,7 @@ body {
 
     box-shadow:
         0 20px 60px
-        rgba(0,0,0,0.5);
+        rgba(0,0,0,.5);
 }
 
 .close-photo {
@@ -798,26 +827,24 @@ body {
 
     color: #e91e63;
 
-    font-size: 28px;
+    font-size: 30px;
 
     cursor: pointer;
 
-    z-index: 10;
+    z-index: 5;
 }
 
 
-/* =====================================
-   PARTE FINAL
-===================================== */
+/* =========================================
+   FINAL
+========================================= */
 
 .final {
 
     text-align: center;
 
     padding:
-        45px
-        20px
-        70px;
+        45px 20px 80px;
 }
 
 .final-heart {
@@ -846,9 +873,9 @@ body {
 }
 
 
-/* =====================================
+/* =========================================
    CORAZONES AL TOCAR
-===================================== */
+========================================= */
 
 .click-heart {
 
@@ -856,9 +883,9 @@ body {
 
     pointer-events: none;
 
-    font-size: 25px;
-
     z-index: 999999;
+
+    font-size: 25px;
 
     animation:
         clickHeart
@@ -875,7 +902,7 @@ body {
 
         transform:
             translate(-50%,-50%)
-            scale(0.5);
+            scale(.5);
     }
 
     100% {
@@ -889,23 +916,21 @@ body {
 }
 
 
-/* =====================================
-   VERSIÓN CELULAR
-===================================== */
+/* =========================================
+   CELULAR
+========================================= */
 
 @media (max-width: 600px) {
 
     .intro {
 
-        padding: 15px;
+        padding: 14px;
     }
 
     .intro-box {
 
         padding:
-            28px
-            17px
-            35px;
+            28px 17px 35px;
 
         border-radius: 30px;
     }
@@ -930,11 +955,17 @@ body {
         font-size: 36px;
     }
 
+    .envelope {
+
+        width: 220px;
+
+        height: 150px;
+    }
+
     .letter {
 
         padding:
-            27px
-            20px;
+            28px 20px;
 
         border-radius: 25px;
     }
@@ -954,8 +985,7 @@ body {
     .surprise {
 
         padding:
-            27px
-            20px;
+            28px 20px;
     }
 
     .photos {
@@ -979,9 +1009,9 @@ body {
 <body>
 
 
-<!-- =====================================
-     CORAZONES DEL FONDO
-===================================== -->
+<!-- =========================================
+     CORAZONES
+========================================= -->
 
 <div
     class="background-hearts"
@@ -989,9 +1019,9 @@ body {
 </div>
 
 
-<!-- =====================================
+<!-- =========================================
      PORTADA
-===================================== -->
+========================================= -->
 
 <section
     class="intro"
@@ -1052,22 +1082,28 @@ body {
         </p>
 
 
-        <!-- SOBRE -->
+        <!-- =====================================
+             SOBRE
+        ====================================== -->
 
         <div class="envelope-area">
 
 
             <div
                 class="envelope"
-                id="envelope">
+                id="envelope"
+                onclick="openLetter()">
+
 
                 <div
                     class="envelope-body">
                 </div>
 
+
                 <div
                     class="flap">
                 </div>
+
 
                 <div
                     class="seal">
@@ -1075,6 +1111,7 @@ body {
                     ❤️
 
                 </div>
+
 
             </div>
 
@@ -1088,6 +1125,8 @@ body {
 
         </div>
 
+
+        <!-- BOTÓN -->
 
         <button
             class="btn"
@@ -1104,9 +1143,9 @@ body {
 
 
 
-<!-- =====================================
+<!-- =========================================
      CARTA
-===================================== -->
+========================================= -->
 
 <section
     class="letter-section"
@@ -1186,13 +1225,7 @@ body {
         </p>
 
 
-        <p
-            style="
-            text-align:center;
-            font-size:22px;
-            color:#e91e63;
-            font-weight:bold;
-            ">
+        <p class="highlight">
 
             Me importas muchísimo. ❤️
 
@@ -1219,8 +1252,9 @@ body {
     </div>
 
 
-
-    <!-- BOTÓN DE SORPRESA -->
+    <!-- =====================================
+         BOTÓN SORPRESA
+    ====================================== -->
 
     <button
         class="btn"
@@ -1231,10 +1265,9 @@ body {
     </button>
 
 
-
     <!-- =====================================
          SORPRESA
-    ===================================== -->
+    ====================================== -->
 
     <div
         class="surprise"
@@ -1298,8 +1331,8 @@ body {
 
 
     <!-- =====================================
-         GALERÍA
-    ===================================== -->
+         FOTOS
+    ====================================== -->
 
     <div class="photo-section">
 
@@ -1314,47 +1347,40 @@ body {
         <div class="photos">
 
 
-            <!-- FOTO 1 -->
-
             <img
                 src="foto1.jpeg"
                 class="real-photo"
-                alt="Nuestro recuerdo"
+                alt="Nuestro recuerdo 1"
                 onclick="openPhoto(this.src)"
             >
 
-
-            <!-- FOTO 2 -->
 
             <img
                 src="foto2.jpeg"
                 class="real-photo"
-                alt="Nuestro recuerdo"
+                alt="Nuestro recuerdo 2"
                 onclick="openPhoto(this.src)"
             >
 
-
-            <!-- FOTO 3 -->
 
             <img
                 src="foto3.jpeg"
                 class="real-photo"
-                alt="Nuestro recuerdo"
+                alt="Nuestro recuerdo 3"
                 onclick="openPhoto(this.src)"
             >
 
 
-            <!-- FOTO 4 -->
-
             <img
                 src="foto4.jpeg"
                 class="real-photo"
-                alt="Nuestro recuerdo"
+                alt="Nuestro recuerdo 4"
                 onclick="openPhoto(this.src)"
             >
 
 
         </div>
+
 
     </div>
 
@@ -1362,7 +1388,7 @@ body {
 
     <!-- =====================================
          FINAL
-    ===================================== -->
+    ====================================== -->
 
     <div class="final">
 
@@ -1402,9 +1428,9 @@ body {
 
 
 
-<!-- =====================================
+<!-- =========================================
      VISOR DE FOTOS
-===================================== -->
+========================================= -->
 
 <div
     class="photo-viewer"
@@ -1423,7 +1449,8 @@ body {
     <img
         id="bigPhoto"
         src=""
-        alt="Foto">
+        alt="Foto ampliada">
+
 
 </div>
 
@@ -1432,12 +1459,13 @@ body {
 <script>
 
 
-/* =====================================
+/* =========================================
    CORAZONES DEL FONDO
-===================================== */
+========================================= */
 
 const heartsContainer =
     document.getElementById("hearts");
+
 
 const heartSymbols = [
     "❤️",
@@ -1455,7 +1483,9 @@ function createHeart() {
     const heart =
         document.createElement("div");
 
+
     heart.className = "heart";
+
 
     heart.innerHTML =
         heartSymbols[
@@ -1466,42 +1496,39 @@ function createHeart() {
             )
         ];
 
+
     heart.style.left =
-        Math.random()
-        *
-        100
-        +
-        "%";
+        Math.random() * 100 + "%";
+
 
     heart.style.fontSize =
         (
             12
             +
-            Math.random()
-            *
-            20
+            Math.random() * 20
         )
-        +
-        "px";
+        + "px";
+
 
     heart.style.animationDuration =
         (
             5
             +
-            Math.random()
-            *
-            7
+            Math.random() * 7
         )
-        +
-        "s";
+        + "s";
+
 
     heartsContainer.appendChild(
         heart
     );
 
+
     setTimeout(
-        () => {
+        function() {
+
             heart.remove();
+
         },
         13000
     );
@@ -1515,89 +1542,103 @@ setInterval(
 
 
 
-/* =====================================
-   SOBRE
-===================================== */
-
-const envelope =
-    document.getElementById(
-        "envelope"
-    );
-
-
-envelope.addEventListener(
-    "click",
-    () => {
-
-        envelope.classList.toggle(
-            "open"
-        );
-
-    }
-);
-
-
-
-/* =====================================
+/* =========================================
    ABRIR CARTA
-===================================== */
+========================================= */
 
 function openLetter() {
+
+
+    const envelope =
+        document.getElementById(
+            "envelope"
+        );
+
+
+    const section =
+        document.getElementById(
+            "letterSection"
+        );
+
+
+    /* Abrir sobre */
 
     envelope.classList.add(
         "open"
     );
 
+
+    /* Mostrar carta */
+
+    section.style.display =
+        "block";
+
+
+    /* Corazones */
+
+    createExplosion();
+
+
+    /* Bajar hasta la carta */
+
     setTimeout(
-        () => {
-
-            const section =
-                document.getElementById(
-                    "letterSection"
-                );
-
-            section.style.display =
-                "block";
+        function() {
 
             section.scrollIntoView({
-                behavior: "smooth"
+                behavior: "smooth",
+                block: "start"
             });
 
         },
-        600
+        500
     );
+
 }
 
 
 
-/* =====================================
-   MOSTRAR SORPRESA
-===================================== */
+/* =========================================
+   SORPRESA
+========================================= */
 
 function showSurprise() {
+
 
     const surprise =
         document.getElementById(
             "surprise"
         );
 
+
     surprise.style.display =
         "block";
 
-    surprise.scrollIntoView({
-        behavior: "smooth"
-    });
 
     createExplosion();
+
+
+    setTimeout(
+        function() {
+
+            surprise.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+        },
+        200
+    );
+
 }
 
 
 
-/* =====================================
+/* =========================================
    EXPLOSIÓN DE CORAZONES
-===================================== */
+========================================= */
 
 function createExplosion() {
+
 
     for (
         let i = 0;
@@ -1605,13 +1646,16 @@ function createExplosion() {
         i++
     ) {
 
+
         const heart =
             document.createElement(
                 "div"
             );
 
+
         heart.className =
             "click-heart";
+
 
         heart.innerHTML =
             heartSymbols[
@@ -1622,103 +1666,141 @@ function createExplosion() {
                 )
             ];
 
+
         heart.style.left =
             (
                 40
                 +
-                Math.random()
-                *
-                20
+                Math.random() * 20
             )
-            +
-            "%";
+            + "%";
+
 
         heart.style.top =
             (
                 45
                 +
-                Math.random()
-                *
-                10
+                Math.random() * 10
             )
-            +
-            "%";
+            + "%";
+
 
         heart.style.animationDuration =
             (
-                0.8
+                .8
                 +
-                Math.random()
-                *
-                1.2
+                Math.random() * 1.2
             )
-            +
-            "s";
+            + "s";
+
 
         document.body.appendChild(
             heart
         );
 
+
         setTimeout(
-            () => {
+            function() {
+
                 heart.remove();
+
             },
             2000
         );
+
     }
+
 }
 
 
 
-/* =====================================
-   ABRIR FOTO EN GRANDE
-===================================== */
+/* =========================================
+   ABRIR FOTO
+========================================= */
 
-function openPhoto(imageSource) {
+function openPhoto(
+    imageSource
+) {
+
 
     const viewer =
         document.getElementById(
             "photoViewer"
         );
+
 
     const bigPhoto =
         document.getElementById(
             "bigPhoto"
         );
 
+
     bigPhoto.src =
         imageSource;
 
+
     viewer.style.display =
         "flex";
+
 }
 
 
 
-/* =====================================
+/* =========================================
    CERRAR FOTO
-===================================== */
+========================================= */
 
 function closePhoto() {
+
 
     const viewer =
         document.getElementById(
             "photoViewer"
         );
 
+
     viewer.style.display =
         "none";
+
 }
 
 
 
-/* =====================================
+/* =========================================
+   CERRAR FOTO TOCANDO FONDO
+========================================= */
+
+document
+    .getElementById("photoViewer")
+    .addEventListener(
+        "click",
+        function(event) {
+
+            if (
+                event.target === this
+            ) {
+
+                closePhoto();
+
+            }
+
+        }
+    );
+
+
+
+/* =========================================
    CORAZÓN AL TOCAR LA PANTALLA
-===================================== */
+========================================= */
 
 document.addEventListener(
     "click",
-    (event) => {
+    function(event) {
+
+
+        /* No crear corazón adicional
+           cuando se toca un botón,
+           sobre o fotografía */
 
         if (
             event.target.tagName === "BUTTON"
@@ -1729,35 +1811,46 @@ document.addEventListener(
         ) {
 
             return;
+
         }
+
 
         const heart =
             document.createElement(
                 "div"
             );
 
+
         heart.className =
             "click-heart";
+
 
         heart.innerHTML =
             "❤️";
 
+
         heart.style.left =
             event.clientX + "px";
 
+
         heart.style.top =
             event.clientY + "px";
+
 
         document.body.appendChild(
             heart
         );
 
+
         setTimeout(
-            () => {
+            function() {
+
                 heart.remove();
+
             },
             1000
         );
+
     }
 );
 
